@@ -1,7 +1,7 @@
 {
-	"name": "gunwiz-sample",
+	"name": "gunwiz-demo",
 	"version": "1.0.0",
-	"description": "GunWiz sample application using vash razor view engine",
+	"description": "GunWiz demo application running on express with vash (razor) view engine",
 	"main": "app.js",
 	"author": {
 		"name": "Enrico Padovani",

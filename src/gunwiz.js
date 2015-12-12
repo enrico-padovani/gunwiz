@@ -1,5 +1,5 @@
 ﻿/**
- * GunWiz - A simple library for building industrial mobile computer wizard web apps 
+ * GunWiz - A simple library for building industrial mobile computer wizard web apps.
  * @version v0.1.0
  * @link http://www.alchemists.it
  * @copyright 2015 Alchemists Srl. All rights reserved.
