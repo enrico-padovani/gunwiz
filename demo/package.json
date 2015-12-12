@@ -1,0 +1,15 @@
+{
+	"name": "gunwiz-sample",
+	"version": "1.0.0",
+	"description": "GunWiz sample application using vash razor view engine",
+	"main": "app.js",
+	"author": {
+		"name": "Enrico Padovani",
+		"email": "enrico.padovani@alchemists.it"
+	},
+	"license": "MIT",
+	"dependencies": {
+		"express": "^4.13.3",
+		"vash": "^0.11.0"
+	}
+}

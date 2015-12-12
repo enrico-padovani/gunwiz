@@ -1,0 +1,45 @@
+@html.extend('layout', function(model){
+
+    @html.block('body', function(model){
+
+        <table>
+            <tr>
+                <th>
+                    @model.title
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    Inset data
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="insertData"/>
+                </td>
+            </tr>
+            <tr>
+                <td class="noSpace">
+                    <table>
+                        <tr>
+                            <td class="left">
+                                <a href="/" data-gw-hotkey="ESC">Home</a>
+                            </td>
+                            <td class="right">
+                                <a href="#" data-gw-click="submit()" data-gw-hotkey="ENTER">Next</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+    })
+    
+    @html.block('scripts', function(){
+
+        <script src="/scripts/controllers/step1.controller.js" type='text/javascript'></script>
+
+    })
+
+})

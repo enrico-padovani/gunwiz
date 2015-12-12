@@ -1,0 +1,25 @@
+@html.extend('layout', function(model){
+
+    @html.block('body', function(model){
+            
+        <table>
+            <tr>
+                <th>
+                    @model.title
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    Main menu
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="/step1" data-gw-hotkey="S"><span>S</span>tep 1</a>
+                </td>
+            </tr>
+        </table>
+
+    })    
+
+})

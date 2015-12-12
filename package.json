@@ -1,0 +1,21 @@
+{
+	"name": "gunwiz",
+	"version": "0.1.0",
+	"description": "A simple library for building industrial mobile computer wizard web apps",
+	"author": {
+		"name": "Enrico Padovani",
+		"email": "enrico.padovani@alchemists.it"
+	},
+	"license": "MIT",
+	"devDependencies": {
+		"gulp": "3.9.0",
+		"gulp-chmod": "1.3.0",
+		"gulp-concat": "2.6.0",
+		"gulp-inject": "3.0.0",
+		"gulp-rename": "1.2.2",
+		"gulp-tslint": "4.1.2",
+		"gulp-uglify": "1.5.1",
+		"rimraf": "2.4.4",
+		"gulp-minify-css": "1.2.2"
+  }
+}
