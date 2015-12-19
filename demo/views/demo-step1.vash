@@ -1,0 +1,53 @@
+@html.extend('layout', function(model){
+
+    @html.block('body', function(model){
+
+        <form action="/step1" method="POST">
+        
+            <table>
+                <tr>
+                    <th>
+                        @model.title
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        Required field
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="requiredField"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Optional field
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" name="optionalField" data-gw-optional/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="noSpace">
+                        <table>
+                            <tr>
+                                <td class="left">
+                                    <a href="/" data-gw-hotkey="ESC">Home</a>
+                                </td>
+                                <td class="right">
+                                    <a href="#" data-gw-click="submit()" data-gw-hotkey="ENTER">Next</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        
+        </form>
+
+    })
+    
+})

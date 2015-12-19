@@ -1,0 +1,49 @@
+@html.extend('layout', function(model){
+
+    @html.block('body', function(model){
+
+        <form action="/step2" method="POST">
+            <input type="hidden" id="answer" />
+            <table data-gw-controller="demoController">
+                <tr>
+                    <th>
+                        @model.title
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        Provide an answer
+                    </td>
+                </tr>
+                <tr>
+                    <td class="noSpace">
+                        <table>
+                            <tr>
+                                <td class="left">
+                                    <a href="#" data-gw-click="noCommand()" data-gw-hotkey="Y"><span>Y</span>es</a>
+                                </td>
+                                <td class="right">
+                                    <a href="#" data-gw-click="yesCommand()" data-gw-hotkey="N"><span>N</span>o</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="/" data-gw-hotkey="ESC">Home</a>
+                    </td>
+                </tr>                
+            </table>
+        
+        </form>
+
+    })
+    
+    @html.block('scripts', function(){
+
+        <script src="/scripts/controllers/demo.controller.js" type='text/javascript'></script>
+
+    })
+
+})
