@@ -3,7 +3,7 @@
     @html.block('body', function(model){
 
         <form action="/step2" method="POST">
-            <input type="hidden" id="answer" />
+            <input type="hidden" id="answer" name="answer" />
             <table data-gw-controller="demoController">
                 <tr>
                     <th>
@@ -20,10 +20,10 @@
                         <table>
                             <tr>
                                 <td class="left">
-                                    <a href="#" data-gw-click="noCommand()" data-gw-hotkey="Y"><span>Y</span>es</a>
+                                    <a href="#" data-gw-click="noCommand()" data-gw-hotkey="N"><span>N</span>o</a>
                                 </td>
                                 <td class="right">
-                                    <a href="#" data-gw-click="yesCommand()" data-gw-hotkey="N"><span>N</span>o</a>
+                                    <a href="#" data-gw-click="yesCommand()" data-gw-hotkey="Y"><span>Y</span>es</a>
                                 </td>
                             </tr>
                         </table>

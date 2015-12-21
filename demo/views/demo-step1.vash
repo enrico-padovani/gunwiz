@@ -17,7 +17,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type="text" name="requiredField"/>
+                        <input type="text" id="requiredField" name="requiredField"/>
                     </td>
                 </tr>
                 <tr>
@@ -27,7 +27,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type="text" name="optionalField" data-gw-optional/>
+                        <input type="text" id="optionalField" name="optionalField" data-gw-optional/>
                     </td>
                 </tr>
                 <tr>
