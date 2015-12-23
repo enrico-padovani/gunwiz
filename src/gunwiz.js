@@ -106,6 +106,19 @@
     }
 
     /**
+    * @name trim
+    *
+    * @description
+    * trim polyfill
+    * The trim() method removes whitespace from both ends of a string. Whitespace in this context is all the whitespace characters (space, tab, no-break space, etc.) and all the line terminator characters (LF, CR, etc.).
+    *
+    * @returns {string} The string stripped of whitespace from both ends
+    */
+    function trim(textToTrim) {
+        return (textToTrim || '').replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+    }
+    
+    /**
      * Submits form data.
      * By default all form values are required in order to fire the form submit.
      * When optional attribute is provided, then submit will ingnore empty value check.
@@ -123,7 +136,7 @@
             if (hasFocus(elements[i])) {
                 foundFocused = true;
             }
-            if (elements[i].value !== '') {
+            if (trim(elements[i].value) !== '') {
                 continue;
             }
             // evaluate empty fields
@@ -144,7 +157,7 @@
         }
         // ensure uppercase
         for (i = 0; i < elements.length; i += 1) {
-            elements[i].value = elements[i].value.toUpperCase();
+            elements[i].value = trim(elements[i].value).toUpperCase();
         }
         // go for submit
         document.forms[0].submit();
