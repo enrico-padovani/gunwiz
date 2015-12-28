@@ -2,7 +2,7 @@
     rename = require('gulp-rename'),
     uglify = require('gulp-uglify'),
     rimraf = require('rimraf'),
-    minifyCss = require('gulp-minify-css');
+    cssnano = require('gulp-cssnano');
 
 var paths = {
     src: './src',
@@ -24,7 +24,7 @@ gulp.task('min:js', function () {
 gulp.task('min:css', function () {
     return gulp.src(paths.src + '/gunwiz.css')
         .pipe(rename(paths.dist + '/gunwiz.min.css'))
-        .pipe(minifyCss())
+        .pipe(cssnano())
         .pipe(gulp.dest('.'));
 });
 
