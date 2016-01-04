@@ -38,7 +38,8 @@
 
     // private fields
     var controllers = [],
-        isBootstrapped = false;
+        isBootstrapped = false,
+        submitInProgress = false;
 
     /**
      * Get a cross browser function for adding events.
@@ -125,9 +126,10 @@
      * When submit is canceled, then the focus will be set on the first empty field.
      */
     function submit() {
-        if (document.forms.length === 0) {
+        if (submitInProgress || document.forms.length === 0) {
             return;
         }
+        submitInProgress = true;
         // enable submit only when all fields are filled in or optional attribute is present
         var elements = getFormElementsByType('text'),
             i,
@@ -144,6 +146,7 @@
                 if (!hasFocus(elements[i]) && foundFocused) {
                     // set focus on current empty not yet focused field, do not submit
                     elements[i].focus();
+                    submitInProgress = false;
                     return;
                 } else if (i === elements.length - 1) {
                     // skip the last field and go for submit
@@ -152,6 +155,7 @@
             } else {
                 // set focus on current empty field, do not submit
                 elements[i].focus();
+                submitInProgress = false;
                 return;
             }
         }
